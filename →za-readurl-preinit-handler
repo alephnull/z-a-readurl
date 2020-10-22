@@ -155,7 +155,7 @@ for cur_paturl ( $pattern_url0 $pattern_url ) {
     }
 
     if [[ -n $filters[index] ]] {
-        list=( ${list[@]:#href=(?|)$~filters[index]} )
+        list=( ${list[@]:#href=${~filters[index]}} )
     }
 
     local selected=${list[1]#href=}
